@@ -1,0 +1,23 @@
+Написать функцию проверки, является ли число простым
+#include <stdio.h>     
+int test(int a, int b, int c);
+int main() {
+    int a;
+    int b;
+    int c;
+    test(a, b, c);
+    return 0;
+}
+int test(int a, int b, int c)
+{
+    scanf("%d", &a);
+    b = 2;
+    do {
+        c = a % b;
+        if (c != 0) b++;
+    } while (c != 0);
+    if (b == a)
+        printf("%d- prostoe", a);
+    else printf("%d - sostavnoe", a);
+    return 0;
+}
